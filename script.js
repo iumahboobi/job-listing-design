@@ -336,7 +336,6 @@ function jobFilter(value) {
         else {
             job.style.display = 'none';
         }
-
     })
 }
 

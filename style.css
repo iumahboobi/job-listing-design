@@ -33,12 +33,21 @@ body{
 }
 .main-box {
     max-width: 1044px;
-    margin: 30px auto;
+    margin: 150px auto;
     display: grid;
-    grid-gap: 28px;
+    grid-gap: 24px;
     grid-template-rows: auto ;
     
     
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 69%;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 12px 0;
 }
 .search-container {
     display: flex;
@@ -59,10 +68,12 @@ body{
     
     font-size: 14pt;
     border: none;
+    width: 40%;
     background-color: #eff7f5;
     border-radius: 14px;
    
 }
+
 .input-container:active, input:focus  {
     outline: 0;
     border: solid 1px hsla(180, 22%, 44%, 0.377);
