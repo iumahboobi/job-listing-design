@@ -219,6 +219,7 @@ function createList(value, classList = []) {
     return list;
 }
 */
+import data from "./data.json";
 var jobsData = [];
 import("./data.json").then((data) => {
   renderJobCards(data);
