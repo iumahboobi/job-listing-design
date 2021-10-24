@@ -219,13 +219,12 @@ function createList(value, classList = []) {
     return list;
 }
 */
-import data from "./data.json";
 var jobsData = [];
 import("./data.json").then((data) => {
   renderJobCards(data);
   jobsData = data;
 });
-
+import data from "./data.json";
 var Inputfilter = document.querySelector("#myInput");
 
 Inputfilter.addEventListener("keyup", (event) => {
