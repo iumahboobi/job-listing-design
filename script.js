@@ -219,21 +219,15 @@ function createList(value, classList = []) {
     return list;
 }
 */
-import data from "./data.json";
-jobsData = data;
-var jobsData = [];
+import { data } from "./data";
 
-/*import("./data.json").then((data) => {
-  renderJobCards(data);
-  jobsData = data;
-}); */
 var Inputfilter = document.querySelector("#myInput");
 Inputfilter.addEventListener("keyup", (event) => {
   jobFilter(event.target.value);
 });
 var mainBox = document.querySelector(".job-container"); // Selecting the mainbox div
-function renderJobCards(data) {
-  data.forEach((job) => {
+function renderJobCards(jobs) {
+  jobs.forEach((job) => {
     var parentDiv,
       logoWidth,
       img,
