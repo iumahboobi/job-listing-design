@@ -219,21 +219,21 @@ function createList(value, classList = []) {
     return list;
 }
 */
+import data from "./data.json";
+jobsData = data;
 var jobsData = [];
-import("./data.json").then((data) => {
+
+/*import("./data.json").then((data) => {
   renderJobCards(data);
   jobsData = data;
-});
-import data from "./data.json";
+}); */
 var Inputfilter = document.querySelector("#myInput");
-
 Inputfilter.addEventListener("keyup", (event) => {
   jobFilter(event.target.value);
 });
-
 var mainBox = document.querySelector(".job-container"); // Selecting the mainbox div
-function renderJobCards(jobs) {
-  jobs.forEach((job) => {
+function renderJobCards(data) {
+  data.forEach((job) => {
     var parentDiv,
       logoWidth,
       img,
@@ -328,6 +328,7 @@ function renderJobCards(jobs) {
     return list;
   }
 }
+
 function jobFilter(value) {
   var allJobs = document.querySelectorAll(".job-box");
   allJobs.forEach((job) => {
@@ -348,9 +349,9 @@ function jobFilter(value) {
 function clrField() {
   Inputfilter.value = "";
   mainBox.innerHTML = "";
-  renderJobCards(jobsData);
+  renderJobCards(data);
 }
-
+renderJobCards(data);
 var clrBtn = document.querySelector(".clear");
 clrBtn.classList.add("clear");
 clrBtn.addEventListener("click", clrField);
