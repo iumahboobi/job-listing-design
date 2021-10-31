@@ -1,6 +1,7 @@
 {
   "scripts":{
-    "build":"parcel build index.html"
+    "build":"parcel build index.html",
+    "postbuild": "cp -r public/* dist/"
   },
   "devDependencies": {
     "parcel": "^2.0.0"

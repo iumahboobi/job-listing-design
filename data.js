@@ -2,7 +2,7 @@ export const data = [
   {
     id: 1,
     company: "Photosnap",
-    logo: "./images/photosnap.svg",
+    logo: "/images/photosnap.svg",
     new: true,
     featured: true,
     position: "Senior Frontend Developer",
@@ -17,7 +17,7 @@ export const data = [
   {
     id: 2,
     company: "Manage",
-    logo: "./images/manage.svg",
+    logo: "/images/manage.svg",
     new: true,
     featured: true,
     position: "Fullstack Developer",
